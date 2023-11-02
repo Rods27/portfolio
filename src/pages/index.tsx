@@ -6,7 +6,7 @@ const Home: NextPage = () =>{
   return (
     <div>
       <Head>
-        <title>Rod``&apos`s Portfolio</title>
+        <title>Rod&apos;s Portfolio</title>
       </Head>
 
       {/* Header */}
