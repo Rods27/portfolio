@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typewriter, Cursor, useTypewriter } from 'react-simple-typewriter'
+import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles'
 import Photo from '../../public/photo.jpg'
 import Image from 'next/image'
@@ -8,7 +8,7 @@ import Link from 'next/link'
 type Props = {}
 
 export default function Hero({}: Props) {
-  const [text, count] = useTypewriter({
+  const [text, _count] = useTypewriter({
     words: [
       "Hi, The Name's Rodrigo",
       'A good team-worker',
