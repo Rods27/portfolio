@@ -1,0 +1,23 @@
+export const commons = {
+  stacks: [
+    { skill: 'html', proficiency: 90 },
+    { skill: 'css', proficiency: 90 },
+    { skill: 'javascript', proficiency: 90 },
+    { skill: 'typescript', proficiency: 90 },
+    { skill: 'react', proficiency: 90 },
+    { skill: 'redux', proficiency: 90 },
+    { skill: 'jest', proficiency: 90 },
+    { skill: 'React Testing Library', proficiency: 90 },
+    { skill: 'Styled Components', proficiency: 90 },
+    { skill: 'sass', proficiency: 90 },
+    { skill: 'eslint', proficiency: 90 },
+    { skill: 'miragejs', proficiency: 90 },
+    { skill: 'msw', proficiency: 90 },
+    { skill: 'prettier', proficiency: 90 },
+    { skill: 'stylelint', proficiency: 90 },
+    { skill: 'tailwind', proficiency: 90 },
+    { skill: 'axios', proficiency: 90 },
+    { skill: 'webpack', proficiency: 90 },
+    { skill: 'zustand', proficiency: 90 },
+  ],
+};
