@@ -41,7 +41,7 @@ function Header() {
         <motion.div
           onClick={setTranslate}
           className={classNamesLib(
-            'w-[55px] h-[30px] pl-[5px] pr-[5px] pt-[2px] mt-[3px] rounded-[100px] flex items-centercursor-pointer select-none transition duration-300',
+            'w-[55px] h-[30px] pl-[5px] pr-[5px] pt-[2px] mt-[3px] rounded-[100px] flex items-centercursor-pointer select-none transition duration-300 cursor-pointer',
             {
               'bg-[#C5C6D0]': isDayMode,
               'bg-night-mode-text': !isDayMode,

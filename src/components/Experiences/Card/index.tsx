@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useConfiguration } from '@/store/modules';
 import classNames from 'classnames';
 import translate from '@translate';
+import images from '@/helpers/images';
 type Props = {};
 
 export default function ExperienceCard({}: Props) {
@@ -26,29 +27,22 @@ export default function ExperienceCard({}: Props) {
             transition={{ duration: 1.2 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-32 h-32 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
-            src={e.src}
+            className="w-28 h-28 rounded-full md:rounded-full xl:w-[100px] xl:h-[100px] object-cover object-center"
+            src={`${images[e.companyName as keyof typeof images].src}`}
           />
-          <div className="px-0 md:px-10 overflow-y-auto" key={e.companyName}>
+          <div className="px-0 md:px-10 overflow-y-auto capitalize" key={e.companyName}>
             <h4 className="text-4xl font-light">{e.role}</h4>
             <p className="font-bold text-2xl mt-1">{e.companyName}</p>
 
             <div className="flex space-x-2 my-2">
-              <img
-                className="h-10 w-10 rounded-full"
-                src="https://cdn.sanity.io/images/ltuexkre/production/2a67945990f9c2ef568cf7e8483c1a8174556463-500x500.png"
-                alt="tech-1"
-              />
-              <img
-                className="h-10 w-10 rounded-full"
-                src="https://cdn.sanity.io/images/ltuexkre/production/2a67945990f9c2ef568cf7e8483c1a8174556463-500x500.png"
-                alt="tech-1"
-              />
-              <img
-                className="h-10 w-10 rounded-full"
-                src="https://cdn.sanity.io/images/ltuexkre/production/2a67945990f9c2ef568cf7e8483c1a8174556463-500x500.png"
-                alt="tech-1"
-              />
+              {e.tecnologies.map((t) => (
+                <img
+                  key={t}
+                  className="h-10 w-10 rounded-full"
+                  src={`${images[t as keyof typeof images].src}`}
+                  alt="tech-1"
+                />
+              ))}
             </div>
 
             <p className="uppercase py-5">{e.start}</p>

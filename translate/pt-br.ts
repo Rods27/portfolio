@@ -32,8 +32,8 @@ const translate = {
       {
         src: 'https://scontent.fcgh17-1.fna.fbcdn.net/v/t39.30808-1/454568079_917189500441807_2169592769897266168_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=103&ccb=1-7&_nc_sid=f907e8&_nc_ohc=7-XAXXAn3FgQ7kNvwFxI3DK&_nc_oc=AdnqLxAc60cECNH1Tmrd9-w7vV-Y6Yg2OjdBpGQueW7f6VFmtEXQASopmEI2VvLzefy9b1ntFj-J-Hwa81oZk1T-&_nc_zt=24&_nc_ht=scontent.fcgh17-1.fna&_nc_gid=v4uyucStS-Rf_LO3EjCK4g&oh=00_AfS-laSZnCxV7E0VX3T4eyDUlodjEeOZcaDxFyTELIc3nQ&oe=68701051',
         role: 'Desenvolvedor Frontend',
-        companyName: 'Webmotors',
-        tecnologies: '',
+        companyName: 'webmotors',
+        tecnologies: ['javascript'],
         start: '21 set 2021',
         atributes: [
           'Experiencia em criar e aperfeiçoar features em um sistema CRM para a Webmotors, usando ReactJS.',
@@ -46,6 +46,28 @@ const translate = {
   },
   skills: {
     title: 'Habilidades',
+    info: 'Paire o mouse sobre uma habilidade para ver sua proficiência',
+    stacks: [
+      { skill: 'javascript', proficiency: 90 },
+      { skill: 'axios', proficiency: 90 },
+      { skill: 'css', proficiency: 90 },
+      { skill: 'eslint', proficiency: 90 },
+      { skill: 'html', proficiency: 90 },
+      { skill: 'jest', proficiency: 90 },
+      { skill: 'miragejs', proficiency: 90 },
+      { skill: 'msw', proficiency: 90 },
+      { skill: 'prettier', proficiency: 90 },
+      { skill: 'react', proficiency: 90 },
+      { skill: 'redux', proficiency: 90 },
+      { skill: 'React Testing Library', proficiency: 90 },
+      { skill: 'sass', proficiency: 90 },
+      { skill: 'Styled Components', proficiency: 90 },
+      { skill: 'stylelint', proficiency: 90 },
+      { skill: 'tailwind', proficiency: 90 },
+      { skill: 'typescript', proficiency: 90 },
+      { skill: 'webpack', proficiency: 90 },
+      { skill: 'zustand', proficiency: 90 },
+    ],
   },
 };
 
