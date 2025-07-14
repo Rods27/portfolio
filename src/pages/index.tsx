@@ -7,17 +7,21 @@ import WorkExperience from '@/components/Experiences';
 import { useConfiguration } from '@/store/modules';
 import classNames from 'classnames';
 import Skills from '@/components/Skills';
+import Projects from '@/components/Projects';
+import ContactMe from '@/components/ContactMe';
 
 const Home: NextPage = () => {
-  const mode = useConfiguration((state) => state.mode);
-  console.log(mode);
+  const isNightMode = useConfiguration((state) => state.mode === 'night');
+  console.log(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID);
   return (
     <div
       className={classNames(
-        'h-screen snap-y snap-mandatory overflow-scroll z-0 overflow-x-hidden',
+        'h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden z-0',
         {
-          'bg-day-mode-background text-day-mode-text': mode === 'day',
-          'bg-night-mode-background text-night-mode-text': mode === 'night',
+          'bg-day-mode-background text-day-mode-text': !isNightMode,
+          'bg-night-mode-background text-night-mode-text': isNightMode,
+          'scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-night-mode-yellow/80': isNightMode,
+          'scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-day-mode-yellow/80': !isNightMode,
         },
       )}
     >
@@ -33,12 +37,12 @@ const Home: NextPage = () => {
         <Hero />
       </section>
 
-      <section id="about" className="snap-start">
+      <section id="about" className="snap-center">
         <About />
       </section>
 
       {/* Experience */}
-      <section id="experience" className="snap-start">
+      <section id="experience" className="snap-center">
         <WorkExperience />
       </section>
       {/* Skills */}
@@ -46,8 +50,13 @@ const Home: NextPage = () => {
         <Skills />
       </section>
       {/* Projects */}
-
+      <section id="projects" className="snap-start">
+        <Projects />
+      </section>
       {/* Contact */}
+      <section id="contact" className="snap-start">
+        <ContactMe />
+      </section>
     </div>
   );
 };

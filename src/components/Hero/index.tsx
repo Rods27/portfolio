@@ -39,7 +39,7 @@ export default function Hero() {
           <Cursor cursorColor={isDayMode ? '#CA8C05' : '#F7AB0A'} />
         </h1>
 
-        <div className="pt-5">
+        <div className="flex justify-center pt-5 gap-2">
           <Link href="#about">
             <button className="heroButton">{sections.about}</button>
           </Link>

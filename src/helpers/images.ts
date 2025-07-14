@@ -19,7 +19,7 @@ import ts from 'src/assets/images/png/typescript.png';
 import webpack from 'src/assets/images/png/webpack.png';
 import zustand from 'src/assets/images/png/zustand.png';
 
-const images = {
+const logosImg = {
   webmotors: webmotors,
   javascript: JS,
   axios: axios,
@@ -42,4 +42,4 @@ const images = {
   zustand: zustand,
 };
 
-export default images;
+export default logosImg;

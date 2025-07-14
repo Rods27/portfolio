@@ -3,11 +3,14 @@ import ExperienceCard from './Card';
 import { motion } from 'framer-motion';
 import { useConfiguration } from '@/store/modules';
 import translate from '@translate';
+import classNames from 'classnames';
 
 type Props = {};
 
 const WorkExperience = (props: Props) => {
   const translateState = useConfiguration((state) => state.translate);
+  const isNightMode = useConfiguration((state) => state.mode === 'night');
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -31,9 +34,17 @@ const WorkExperience = (props: Props) => {
       <h3 className="absolute top-24 text-center uppercase tracking-[20px] text-2xl z-50 min mb-5">
         {translate[translateState].experience.title}
       </h3>
-      <div className="w-full flex space-x-5 overflow-x-auto p-10 snap-x snap-mandatory [@media(max-height:1200px)]:h-[80%]">
-        <ExperienceCard />
-        <ExperienceCard />
+      <div
+        className={classNames(
+          'w-full flex space-x-5 overflow-x-auto p-10 snap-x snap-mandatory [@media(max-height:1200px)]:h-[80%]',
+          {
+            'scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-night-mode-yellow/80':
+              isNightMode,
+            'scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-day-mode-yellow/80':
+              !isNightMode,
+          },
+        )}
+      >
         <ExperienceCard />
         <ExperienceCard />
       </div>

@@ -15,7 +15,7 @@ const translate = {
         "Hi, The Name's Rodrigo",
         'A good team-worker',
         'Coffee.tsx',
-        '<Component props={...caffeine}/>',
+        '<Component props={...coffe} />',
       ],
     },
   },
@@ -35,8 +35,10 @@ const translate = {
         src: 'webmotors',
         role: 'Frontend Developer',
         companyName: 'webmotors',
-        tecnologies: ['javascript'],
-        start: '21 sep 2021',
+        tecnologies: commons.stacks
+          .map((e) => e.skill)
+          .filter((e) => !['html', 'css', 'sass', 'tailwind'].includes(e)),
+        start: '21 sep 2021 = 4 years',
         atributes: [
           'Experience in creating and enhancing features for a Customer Relationship Management (CRM) system at Webmotors. Specialized in the ReactJS ecosystem.',
           'Proficient in technologies such as Javascript, Redux, Redux-Saga, Styled Components, Axios, Webpack, and Typescript.',
@@ -48,8 +50,35 @@ const translate = {
   },
   skills: {
     title: 'Skills',
-    info: 'Hover over a skill for currency proficiency',
+    info: 'Hover over a skill for current proficiency',
     stacks: commons.stacks,
+  },
+  projects: {
+    title: 'Projects',
+    projects: [
+      {
+        title: 'Musics Library',
+        info: "An application to play and choose your favorite musics, you can listen a preview or be redirected to deezer's website and listen the complete version. You can filter by genre, artist and album too.",
+        src: 'musicsLibrary',
+      },
+      {
+        title: 'Postbook',
+        info: 'Postbook',
+        src: 'postbook',
+      },
+    ],
+  },
+  contact: {
+    title: 'Contact',
+    subtitle: 'I have got just what you need.',
+    contact: 'Lets talk.',
+    form: {
+      name: 'Name',
+      email: 'Email',
+      subject: 'Subject',
+      message: 'Message',
+    },
+    submit: 'Send',
   },
 };
 

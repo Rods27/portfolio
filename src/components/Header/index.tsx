@@ -9,6 +9,7 @@ import dayMode from '../../../public/day-mode.png';
 import nightMode from '../../../public/night-mode.png';
 import Image from 'next/image';
 import translate from '@translate';
+import Link from 'next/link';
 
 function Header() {
   const setTranslate = useConfiguration((state) => state.setTranslate);
@@ -80,15 +81,18 @@ function Header() {
           network="email"
           fgColor={isDayMode ? 'black' : '#fff'}
           bgColor="transparent"
+          href="www.google.com.br"
         />
-        <p
-          className={classNamesLib('uppercase hidden md:inline-flex text-sm select-none', {
-            'text-day-mode-text': isDayMode,
-            'text-night-mode-text': !isDayMode,
-          })}
-        >
-          {translate[translateState].header.contact}
-        </p>
+        <Link href="#contact">
+          <p
+            className={classNamesLib('uppercase hidden md:inline-flex text-sm select-none', {
+              'text-day-mode-text': isDayMode,
+              'text-night-mode-text': !isDayMode,
+            })}
+          >
+            {translate[translateState].header.contact}
+          </p>
+        </Link>
       </motion.div>
     </header>
   );

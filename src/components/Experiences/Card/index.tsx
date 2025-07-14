@@ -4,16 +4,16 @@ import { useConfiguration } from '@/store/modules';
 import classNames from 'classnames';
 import translate from '@translate';
 import images from '@/helpers/images';
-type Props = {};
+import Image from 'next/image';
 
-export default function ExperienceCard({}: Props) {
+export default function ExperienceCard() {
   const isDayMode = useConfiguration((state) => state.mode === 'day');
   const translateState = useConfiguration((state) => state.translate);
 
   return (
     <article
       className={classNames(
-        ' flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[700px] select-none snap-center p-10 hover:opacity-100 opacity-40 transition-opacity duration-200 overflow-hidden',
+        'flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[700px] select-none snap-center p-10 hover:opacity-100 opacity-40 transition-opacity duration-200 overflow-hidden',
         {
           'bg-night-mode-card': !isDayMode,
           'bg-day-mode-card': isDayMode,
@@ -21,7 +21,7 @@ export default function ExperienceCard({}: Props) {
       )}
     >
       {translate[translateState].experience.companies.map((e) => (
-        <>
+        <div key={e.companyName}>
           <motion.img
             initial={{ y: -100, opacity: 0 }}
             transition={{ duration: 1.2 }}
@@ -34,13 +34,17 @@ export default function ExperienceCard({}: Props) {
             <h4 className="text-4xl font-light">{e.role}</h4>
             <p className="font-bold text-2xl mt-1">{e.companyName}</p>
 
-            <div className="flex space-x-2 my-2">
+            <div className="flex space-x-2 my-2 flex-wrap gap-x-2 gap-y-1">
               {e.tecnologies.map((t) => (
-                <img
+                <div
                   key={t}
-                  className="h-10 w-10 rounded-full"
-                  src={`${images[t as keyof typeof images].src}`}
-                  alt="tech-1"
+                  className="h-10 w-10 min-w-10 min-h-10 rounded-full bg-center bg-no-repeat bg-white"
+                  title={`${t[0].toUpperCase()}${t.substring(1, t.length)}`}
+                  style={{
+                    backgroundImage: `url(${images[t as keyof typeof images]?.src})`,
+                    backgroundSize: '110%',
+                    border: '1px solid rgba(0, 0, 0, 0.2)',
+                  }}
                 />
               ))}
             </div>
@@ -53,7 +57,7 @@ export default function ExperienceCard({}: Props) {
               ))}
             </ul>
           </div>
-        </>
+        </div>
       ))}
     </article>
   );
