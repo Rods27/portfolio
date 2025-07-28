@@ -29,9 +29,10 @@ const WorkExperience = (props: Props) => {
       justify-evenly
       mx-auto
       items-center
+      min-height
     "
     >
-      <h3 className="absolute top-24 text-center uppercase tracking-[20px] text-2xl z-50 min mb-5">
+      <h3 className="absolute top-16 text-center uppercase tracking-[20px] text-2xl z-50 w-max height-850:top-8 mb-5 ">
         {translate[translateState].experience.title}
       </h3>
       <div

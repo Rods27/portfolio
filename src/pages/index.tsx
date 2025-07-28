@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   return (
     <div
       className={classNames(
-        'h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden z-0',
+        'h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden z-0 min-height',
         {
           'bg-day-mode-background text-day-mode-text': !isNightMode,
           'bg-night-mode-background text-night-mode-text': isNightMode,
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
         <WorkExperience />
       </section>
       {/* Skills */}
-      <section id="skills" className="snap-start">
+      <section id="skills" className="snap-start min-height">
         <Skills />
       </section>
       {/* Projects */}

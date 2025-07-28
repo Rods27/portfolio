@@ -15,4 +15,8 @@
     text-gray-500 placeholder-gray-500 transition-all focus:border-night-mode-yellow/40 
     focus:text-night-mode-yellow/40 hover:border-night-mode-yellow/40 caret-current
   }
+
+  .min-height {
+    min-height: 800px
+  }
 }

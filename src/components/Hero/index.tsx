@@ -22,7 +22,7 @@ export default function Hero() {
     delaySpeed: 2000,
   });
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden min-height">
       <BackgroundCircles />
       <Image
         src={Photo}

@@ -24,6 +24,11 @@ const config: Config = {
         'day-mode-background-circles': '#696977',
         'day-mode-card': '#ECEDF2',
       },
+      screens: {
+        'height-850': {
+          raw: '(max-height: 850px)',
+        },
+      },
     },
   },
   plugins: [require('tailwind-scrollbar')],
