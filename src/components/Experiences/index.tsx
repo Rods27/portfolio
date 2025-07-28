@@ -36,7 +36,7 @@ const WorkExperience = (props: Props) => {
       </h3>
       <div
         className={classNames(
-          'w-full flex space-x-5 overflow-x-auto p-10 snap-x snap-mandatory [@media(max-height:1200px)]:h-[80%]',
+          'w-full flex space-x-5 overflow-x-auto p-10 snap-x snap-mandatory [@media(max-height:1200px)]:h-[80%] justify-center overflow-y-hidden',
           {
             'scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-night-mode-yellow/80':
               isNightMode,
@@ -45,7 +45,6 @@ const WorkExperience = (props: Props) => {
           },
         )}
       >
-        <ExperienceCard />
         <ExperienceCard />
       </div>
     </motion.div>

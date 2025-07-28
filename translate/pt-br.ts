@@ -13,9 +13,9 @@ const translate = {
       project: 'Projetos',
       words: [
         'Oi, meu nome é Rodrigo',
-        'Ótimo em trabalho em equipe',
-        'Café.tsx',
-        '<Componente props={...cafeina} />',
+        'Amante de um bom café',
+        'Cafe.tsx',
+        '<Componente props={...cafezinho} />',
       ],
     },
   },
@@ -25,8 +25,12 @@ const translate = {
     underlineTitle: 'pouco',
     secondtitle: 'sobre mim',
     text: 'Texto sobre mim',
-    about:
-      'Sou apaixonado por Tecnologia, sou extremamente dedicado e determinado, gosto de enxergar as aplicações mais como cliente do que como programador, assim posso otimizá-las com excelência.\nDesenvolvedor de software , Front-end, React, JavaScript, Typescript',
+    about: `
+      Sou um desenvolvedor frontend com quatro anos de experiência, especializado em React e Javascript e Typescript.
+
+      Atuação em diversos projetos, dentre eles, um grande projeto de CRM focado em um relacionamento entre cliente e lead, grande e escalável usando tecnologias modernas e robustas, totalmente testado. Atuei em outros projetos em focados micro-frontend, performance e Design System.
+
+      Ótimo com trabalho em equipe, já trabalhei com times grandes, demandas entre diferentes times, entregas desde pequenas até grandes, sou muito ágil e autônomo, focado em qualidade e resultado.`,
   },
   experience: {
     title: 'experiência',
@@ -44,6 +48,8 @@ const translate = {
           'Proficiente em tecnologias como Javascript, Redux, Redux-Saga, Styled Components, Axios, Webpack e Typescript.',
           'Usando ferramentas CI/CD como Jenkins, Bitbucket, GitHub, e ferramentas como Jira para seguir princípios Agile.',
           'Criação de soluções tecnicas para demandas frontend de acordo com Figma, e sustentação de problemas da plataforma.',
+          'Criação de micro-frontends escaláveis para paralelizar o projeto e aumentar a agilidade',
+          'Atualização e manutenção do projeto, visando performance e tecnologias mais robustas do mercado',
         ],
       },
     ],

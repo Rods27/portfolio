@@ -12,8 +12,8 @@ const translate = {
       skills: 'Skills',
       project: 'Projects',
       words: [
-        "Hi, The Name's Rodrigo",
-        'A good team-worker',
+        'Hi, my name is Rodrigo',
+        'Coffee lover',
         'Coffee.tsx',
         '<Component props={...coffe} />',
       ],
@@ -25,8 +25,13 @@ const translate = {
     underlineTitle: 'little',
     secondtitle: 'background',
     text: 'Background about me',
-    about:
-      'I am passionate about Technology and coding, im extremely dedicated and determined, i like to see applications more as a client than as a programmer, so i can optimize them with excellence.\nSoftware developer, Front-end, React, JavaScript, Typescript',
+    about: `
+    I'm a Front-end Developer with four years of experience, specialized in React, JavaScript, and TypeScript.
+
+    I've worked on a variety of projects, including a large-scale CRM platform focused on customer and lead relationship management. The project was designed to be scalable, robust, modern, and fully tested.
+    I've also contributed to projects involving micro-frontends, performance optimization, and Design System implementation.
+
+    Im very good at team working, having worked with large teams and cross-squad initiatives. I’m agile, autonomous, and highly focused on code quality and delivering results.`,
   },
   experience: {
     title: 'Experience',
@@ -38,12 +43,14 @@ const translate = {
         tecnologies: commons.stacks
           .map((e) => e.skill)
           .filter((e) => !['html', 'css', 'sass', 'tailwind'].includes(e)),
-        start: '21 sep 2021 = 4 years',
+        start: '21 sep 2021 - Until Now - 4 years',
         atributes: [
           'Experience in creating and enhancing features for a Customer Relationship Management (CRM) system at Webmotors. Specialized in the ReactJS ecosystem.',
           'Proficient in technologies such as Javascript, Redux, Redux-Saga, Styled Components, Axios, Webpack, and Typescript.',
           'Integration with DevOps tools like Jenkins, Bitbucket, GitHub, and project management following Scrum and Agile methodologies.',
           'Creation of technical solutions for frontend features according to Figma, and platform support problems.',
+          'Development of scalable micro-frontends to parallelize the project and increase delivery agility.',
+          'Project maintenance and continuous updates, focusing on performance and adoption of more robust, modern technologies',
         ],
       },
     ],

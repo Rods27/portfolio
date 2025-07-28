@@ -68,7 +68,7 @@ export default function About({}: Props) {
           <span className="underline decoration-[#f7AB0A]">{about.underlineTitle}</span>{' '}
           {about.secondtitle}
         </h4>
-        <p className="text-base">{about.about}</p>
+        <p className="text-base whitespace-pre-line">{about.about}</p>
       </div>
     </div>
   );
