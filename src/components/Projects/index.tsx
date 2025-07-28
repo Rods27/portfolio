@@ -4,6 +4,7 @@ import { useConfiguration } from '@/store/modules';
 import translate from '@translate';
 import projectsImg from '@/helpers/projects';
 import classNames from 'classnames';
+import { useScrollContainer } from 'react-indiana-drag-scroll';
 
 export default function Projects() {
   const { translate: translateState } = useConfiguration();
@@ -12,6 +13,8 @@ export default function Projects() {
   const {
     projects: { projects, title },
   } = translate[translateState];
+
+  const scrollContainer = useScrollContainer();
 
   return (
     <motion.div
@@ -26,8 +29,9 @@ export default function Projects() {
       </h3>
 
       <div
+        ref={scrollContainer.ref}
         className={classNames(
-          'relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20',
+          'relative w-full flex overflow-x-scroll overflow-y-hidden z-20 cursor-grab',
           {
             'scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-night-mode-yellow/80':
               isNightMode,
@@ -40,7 +44,7 @@ export default function Projects() {
           <div
             key={p.title}
             className="w-screen flex-shrink-0 snap-center flex flex-col items-center justify-center
-            space-y-5items-centerjustify-center p-20 md:p-44 h-[99vh]"
+            space-y-5items-centerjustify-center p-20 md:p-44 h-[99vh] select-none"
           >
             <motion.img
               initial={{ y: -300, opacity: 0 }}
@@ -49,7 +53,8 @@ export default function Projects() {
               viewport={{ once: true }}
               src={`${projectsImg[p.src as keyof typeof projectsImg]?.src}`}
               alt={p.title}
-              className="lg:w-[800px]"
+              draggable={false}
+              className="lg:w-[800px] select-none"
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">

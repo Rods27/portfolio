@@ -22,6 +22,7 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-hook-form": "^7.60.0",
+    "react-indiana-drag-scroll": "^3.0.4-alpha",
     "react-simple-typewriter": "^5.0.1",
     "react-social-icons": "^5.15.0",
     "sanity": "3.99.0",
