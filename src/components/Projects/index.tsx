@@ -5,6 +5,8 @@ import translate from '@translate';
 import projectsImg from '@/helpers/projects';
 import classNames from 'classnames';
 import { useScrollContainer } from 'react-indiana-drag-scroll';
+import Link from 'next/link';
+import favicon from '@/helpers/favicon';
 
 export default function Projects() {
   const { translate: translateState } = useConfiguration();
@@ -56,12 +58,27 @@ export default function Projects() {
               draggable={false}
               className="lg:w-[800px] select-none"
             />
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
+            <div className="space-y-10 px-0 md:px-10 max-w-6xl mb-5">
+              <h4 className="flex items-center justify-center text-4xl font-semibold text-center">
+                {p.favicon && (
+                  <motion.img
+                    className="w-8 m-2"
+                    src={`${favicon[p.favicon as keyof typeof favicon]?.src}`}
+                  ></motion.img>
+                )}
                 <span className="underline decoration-day-mode-yellow/50">{p.title}</span>
               </h4>
-              <p className="text-lg text-center md:text-left">{p.info}</p>
+              <ul className="flex flex-col gap-2">
+                {p.info.map((i) => (
+                  <li className="text-lg text-center md:text-left whitespace-pre-line" key={i}>
+                    {i}
+                  </li>
+                ))}
+              </ul>
             </div>
+            <Link className="cursor-pointer font-medium" href={p.link} target="a_blank">
+              Link github
+            </Link>
           </div>
         ))}
       </div>

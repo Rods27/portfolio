@@ -64,13 +64,33 @@ const translate = {
     projects: [
       {
         title: 'Musics Library',
-        info: 'Um projeto feito para escutar músicas e salvá-las como favoritas, além disso, pode escutar o preview de 30 segundos, ou ser direcionado para o site da deezer e ouvir a versao completa. Também pode fitrar pelo genero, artista ou album.',
+        info: [
+          'Um projeto feito para escutar músicas e salvá-las como favoritas, além disso, pode escutar o preview de 30 segundos, ou ser direcionado para o site da deezer e ouvir a versao completa.',
+          'Também pode fitrar pelo genero, artista ou album.',
+        ],
         src: 'musicsLibrary',
+        link: 'https://github.com/Rods27/musics-library',
+        favicon: 'musicsLibrary',
       },
       {
-        title: 'Postbook',
-        info: 'Postbook',
+        title: 'Delivery App',
+        info: [
+          'Uma aplicação que simula um site de compra de bebidas, o usuário pode se cadastrar, escolher as bebidas da tela de produtos, escolher seu endereço na tela de checkout, checar suas ordens na tela de ordens, marcar seu pedido caso seja entregue.',
+          'Como vendedor pode checar suas ordens, marcar o pedido como "preparando" e como "saiu para entrega". Como administrador, pode cadastrar ou deletar usuários.',
+        ],
+        src: 'deliveryApp',
+        link: 'https://github.com/Rods27/delivery-app',
+        favicon: 'deliveryApp',
+      },
+      {
+        title: 'Post Book',
+        info: [
+          'Um projeto simples apenas para renderização de post, detalhe de post e favoritos.',
+          'Contém infinite scrolling.',
+        ],
         src: 'postbook',
+        link: 'https://github.com/Rods27/postbook',
+        favicon: 'postbook',
       },
     ],
   },

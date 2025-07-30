@@ -65,13 +65,33 @@ const translate = {
     projects: [
       {
         title: 'Musics Library',
-        info: "An application to play and choose your favorite musics, you can listen a preview or be redirected to deezer's website and listen the complete version. You can filter by genre, artist and album too.",
+        info: [
+          "An application to play and choose your favorite musics, you can listen a preview or be redirected to deezer's website and listen the complete version.",
+          'You can filter by genre, artist and album too.',
+        ],
         src: 'musicsLibrary',
+        link: 'https://github.com/Rods27/musics-library',
+        favicon: 'musicsLibrary',
       },
       {
-        title: 'Postbook',
-        info: 'Postbook',
+        title: 'Delivery App',
+        info: [
+          'An application that simulates a beverage shopping website. The user can sign up, choose drinks from the products page, select their address on the checkout page, check their orders on the orders page, and mark the order as delivered.',
+          "As a seller, they can check their orders and mark them as 'preparing' or 'out for delivery'. As an admin, they can register or delete users.",
+        ],
+        src: 'deliveryApp',
+        link: 'https://github.com/Rods27/delivery-app',
+        favicon: 'deliveryApp',
+      },
+      {
+        title: 'Post Book',
+        info: [
+          'A simple project just for rendering posts, post details, and favorites.',
+          'Includes infinite scrolling.',
+        ],
         src: 'postbook',
+        link: 'https://github.com/Rods27/postbook',
+        favicon: 'postbook',
       },
     ],
   },
