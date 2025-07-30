@@ -34,13 +34,15 @@ export default function Hero() {
         })}
       />
       <div className="z-20">
-        <h2 className="text-sm pb-2 tracking-[15px] uppercase">{sections.title}</h2>
+        <h2 className="text-sm pb-2 tracking-[15px] uppercase mobile:max-w-[470px]">
+          {sections.title}
+        </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10 mobile:text-2xl">
           <span className="mr-3 select-non">{text}</span>
           <Cursor cursorColor={isDayMode ? '#CA8C05' : '#F7AB0A'} />
         </h1>
 
-        <div className="flex justify-center pt-5 gap-2 mobile: flex-wrap">
+        <div className="flex justify-center pt-5 gap-2 mobile:flex-wrap mobile:w-[270px] mobile:mx-auto">
           <Link href="#about">
             <button className="heroButton">{sections.about}</button>
           </Link>
