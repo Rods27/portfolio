@@ -19,4 +19,8 @@
   .min-height {
     min-height: 800px
   }
+  
+  .scroll {
+    @apply scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-night-mode-yellow
+  }
 }

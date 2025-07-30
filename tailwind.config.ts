@@ -28,6 +28,9 @@ const config: Config = {
         'height-850': {
           raw: '(max-height: 850px)',
         },
+        mobile: {
+          raw: '(max-width: 650px)',
+        },
       },
     },
   },

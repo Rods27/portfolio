@@ -21,6 +21,7 @@ export default function Hero() {
     loop: true,
     delaySpeed: 2000,
   });
+
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden min-height">
       <BackgroundCircles />
@@ -34,12 +35,12 @@ export default function Hero() {
       />
       <div className="z-20">
         <h2 className="text-sm pb-2 tracking-[15px] uppercase">{sections.title}</h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
-          <span className="mr-3 select-none">{text}</span>
+        <h1 className="text-5xl lg:text-6xl font-semibold px-10 mobile:text-2xl">
+          <span className="mr-3 select-non">{text}</span>
           <Cursor cursorColor={isDayMode ? '#CA8C05' : '#F7AB0A'} />
         </h1>
 
-        <div className="flex justify-center pt-5 gap-2">
+        <div className="flex justify-center pt-5 gap-2 mobile: flex-wrap">
           <Link href="#about">
             <button className="heroButton">{sections.about}</button>
           </Link>

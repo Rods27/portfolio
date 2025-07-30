@@ -25,9 +25,28 @@ export default function About({}: Props) {
     px-10
     justify-evenly
     mx-auto
-    items-center min-height"
+    items-center
+    md:min-height
+    mobile:justify-center
+    mobile:grid
+    mobile:grid-rows-[15%,20%,65%]
+    mobile:items-start
+    mobile:place-items-center
+    mobile:px-4
+    "
     >
-      <h3 className="absolute top-24 text-center uppercase tracking-[20px] text-2xl height-850:top-8">
+      <h3
+        className="absolute
+        top-24
+        text-center
+        uppercase
+        tracking-[20px]
+        text-2xl
+        height-850:top-8
+        mobile:top-16
+        mobile:relative
+      "
+      >
         {about.pageTitle}
       </h3>
       <motion.div
@@ -51,10 +70,12 @@ export default function About({}: Props) {
             xl:min-w-[400px]
             xl:min-h-[500px]
             flex-shrink-0
-            min-w-56
-            min-h-56
             rounded-full
             object-cover
+            w-56
+            h-56
+            mobile:w-[150px]
+            mobile:h-[150px]
           "
             src={aboutImg}
             alt={'about-img'}
@@ -62,13 +83,23 @@ export default function About({}: Props) {
         </motion.div>
       </motion.div>
 
-      <div className="space-y-10 px-0 md:px-10 w-[70%]">
-        <h4 className="text-4xl font-semibold">
+      <div
+        className="space-y-10 px-0 md:px-10 w-[70%]
+        mobile:space-y-2
+        mobile:w-[90%]
+        mobile:h-[90%]
+        mobile:p-[8px]
+        mobile:flex
+        mobile:flex-col"
+      >
+        <h4 className="text-4xl font-semibold mobile:text-xl">
           {about.title}{' '}
           <span className="underline decoration-[#f7AB0A]">{about.underlineTitle}</span>{' '}
           {about.secondtitle}
         </h4>
-        <p className="text-base whitespace-pre-line">{about.about}</p>
+        <p className="text-base whitespace-pre-line mobile:overflow-scroll mobile:h-[100%] mobile:px-2 scroll">
+          {about.about}
+        </p>
       </div>
     </div>
   );
