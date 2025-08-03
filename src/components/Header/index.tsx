@@ -19,6 +19,9 @@ function Header() {
   const mode = useConfiguration((state) => state.mode);
   const isDayMode = mode === 'day';
 
+  const isMobile = typeof window !== 'undefined' && window?.innerWidth < 600;
+  const mobileStyle = isMobile ? 45 : 50;
+
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20">
       <motion.div
@@ -32,17 +35,19 @@ function Header() {
           url="https://github.com/Rods27"
           fgColor={isDayMode ? 'black' : '#fff'}
           bgColor="transparent"
+          style={{ width: `${mobileStyle}px`, height: `${mobileStyle}px` }}
         />
         <SocialIcon
           target="_blank"
           url="https://www.linkedin.com/in/rodrigoleite27/"
           fgColor={isDayMode ? 'black' : '#fff'}
           bgColor="transparent"
+          style={{ width: `${mobileStyle}px`, height: `${mobileStyle}px` }}
         />
         <motion.div
           onClick={setTranslate}
           className={classNamesLib(
-            'w-[55px] h-[30px] pl-[5px] pr-[5px] pt-[2px] mt-[3px] rounded-[100px] flex items-centercursor-pointer select-none transition duration-300 cursor-pointer',
+            'w-[55px] h-[30px] pl-[5px] pr-[5px] pt-[2px] mt-[3px] rounded-[100px] flex items-centercursor-pointer select-none transition duration-300 cursor-pointer mobileMd:w-[45px] mobileMd:h-[25px]',
             {
               'bg-[#C5C6D0]': isDayMode,
               'bg-night-mode-text': !isDayMode,
@@ -54,10 +59,10 @@ function Header() {
             style={{ border: '0.5px solid rgba(0, 0, 0, .1)' }}
             alt="translate-country"
             className={classNamesLib(
-              'w-[25px] h-[25px] rounded-[300px] bg-night-mode-background relative transition duration-300',
+              'w-[25px] h-[25px] rounded-[300px] bg-night-mode-background relative transition duration-300 mobileMd:w-[20px] mobileMd:h-[20px]',
               {
                 'translate-x-0': isEnglish,
-                'translate-x-5': !isEnglish,
+                'translate-x-5 mobileMd:translate-x-4': !isEnglish,
               },
             )}
           />
@@ -73,7 +78,7 @@ function Header() {
         <Image
           src={isDayMode ? nightMode : dayMode}
           alt="translate-country"
-          className={'w-[30px] h-[30px]'}
+          className={'w-[30px] h-[30px] mobileSm:w-[25px] mobileSm:h-[25px]'}
           onClick={() => setMode()}
         />
         <SocialIcon
@@ -82,6 +87,7 @@ function Header() {
           fgColor={isDayMode ? 'black' : '#fff'}
           bgColor="transparent"
           href="www.google.com.br"
+          style={{ width: `${mobileStyle}px`, height: `${mobileStyle}px` }}
         />
         <Link href="#contact">
           <p

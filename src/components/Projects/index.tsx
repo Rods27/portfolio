@@ -26,7 +26,7 @@ export default function Projects() {
       className="h-screen relative flex overflow-hidden flex-col text-left 
       md:flex-row max-w-full justify-evenly mx-auto items-center z-0 min-height"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-2xl height-850:top-12">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-2xl height-850:top-12 mobileMd:text-xl mobileMd:tracking-[15px] mobileMd:top-20 mobileSm:text-lg mobileSm:tracking-[10px] mobileSm:top-24">
         {title}
       </h3>
 
@@ -35,10 +35,8 @@ export default function Projects() {
         className={classNames(
           'relative w-full flex overflow-x-scroll overflow-y-hidden z-20 cursor-grab',
           {
-            'scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-night-mode-yellow/80':
-              isNightMode,
-            'scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-day-mode-yellow/80':
-              !isNightMode,
+            'scrollbar-night': isNightMode,
+            'scrollbar-day': !isNightMode,
           },
         )}
       >
@@ -46,7 +44,7 @@ export default function Projects() {
           <div
             key={p.title}
             className="w-screen flex-shrink-0 snap-center flex flex-col items-center justify-center
-            space-y-5items-centerjustify-center p-20 md:p-44 h-[99vh] select-none"
+            space-y-5items-centerjustify-center p-20 md:p-44 h-[99vh] select-none mobileMd:p-10 mobileSm:p-5"
           >
             <motion.img
               initial={{ y: -300, opacity: 0 }}
@@ -56,13 +54,13 @@ export default function Projects() {
               src={`${projectsImg[p.src as keyof typeof projectsImg]?.src}`}
               alt={p.title}
               draggable={false}
-              className="lg:w-[800px] select-none"
+              className="lg:w-[800px] select-none mobileMd:w-[600px] mobileSm:w-[400px]"
             />
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl mb-5">
-              <h4 className="flex items-center justify-center text-4xl font-semibold text-center">
+            <div className="space-y-10 px-0 md:px-10 max-w-6xl mb-5 mobileMd:space-y-6 mobileMd:px-5 mobileSm:space-y-4 mobileSm:px-2">
+              <h4 className="flex items-center justify-center text-4xl font-semibold text-center mobileMd:text-3xl mobileSm:text-2xl">
                 {p.favicon && (
                   <motion.img
-                    className="w-8 m-2"
+                    className="w-8 m-2 mobileMd:w-6 mobileSm:w-5"
                     src={`${favicon[p.favicon as keyof typeof favicon]?.src}`}
                   ></motion.img>
                 )}
@@ -70,7 +68,10 @@ export default function Projects() {
               </h4>
               <ul className="flex flex-col gap-2">
                 {p.info.map((i) => (
-                  <li className="text-lg text-center md:text-left whitespace-pre-line" key={i}>
+                  <li
+                    className="text-lg text-center md:text-left whitespace-pre-line mobileMd:text-base mobileSm:text-sm"
+                    key={i}
+                  >
                     {i}
                   </li>
                 ))}

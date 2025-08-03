@@ -23,4 +23,39 @@
   .scroll {
     @apply scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-night-mode-yellow
   }
+
+  /* Scroll styles for day mode */
+  .scrollbar-day {
+    @apply scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-day-mode-yellow/80
+  }
+
+  /* Scroll styles for night mode */
+  .scrollbar-night {
+    @apply scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-night-mode-yellow/80
+  }
+
+  /* Global scrollbar styles */
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #F7AB0A #374151;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: rgba(55, 65, 81, 0.2);
+    border-radius: 4px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #F7AB0A;
+    border-radius: 4px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #CA8C05;
+  }
 }

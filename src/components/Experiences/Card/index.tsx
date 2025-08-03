@@ -13,7 +13,7 @@ export default function ExperienceCard() {
   return (
     <article
       className={classNames(
-        'flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[700px] select-none snap-center p-10 hover:opacity-100 opacity-40 transition-opacity duration-200 max-h-[920px]',
+        'flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[700px] select-none snap-center p-10 hover:opacity-100 opacity-40 transition-opacity duration-200 max-h-[920px] mobileMd:w-[340px] mobileMd:space-y-2 mobileMd:max-h-[600px] mobileMd:pt-1 mobileSm:w-[280px] mobileSm:space-y-1 mobileSm:max-h-[500px] mobileSm:pt-0 mobileMd:p-0 mobileSm:p-0',
         {
           'bg-night-mode-card': !isDayMode,
           'bg-day-mode-card': isDayMode,
@@ -21,24 +21,86 @@ export default function ExperienceCard() {
       )}
     >
       {translate[translateState].experience.companies.map((e) => (
-        <div key={e.companyName} className="flex flex-col h-[100%]">
+        <div
+          key={e.companyName}
+          className="
+            flex
+            flex-col
+            h-[100%]
+            w-[100%]
+            mobileMd:items-center
+            mobileMd:justify-center
+            mobileMd:w-[85%]
+            mobileSm:w-[55%]
+            "
+        >
           <motion.img
             initial={{ y: -100, opacity: 0 }}
             transition={{ duration: 1.2 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-28 h-28 rounded-full md:rounded-full xl:w-[100px] xl:h-[100px] object-cover object-center"
+            className="
+              w-28
+              h-28
+              rounded-full
+              md:rounded-full
+              xl:w-[100px]
+              xl:h-[100px]
+              object-cover
+              object-center
+              mobileMd:w-20
+              mobileMd:h-20
+              mobileMd:mb-[15px]
+              mobileSm:w-16
+              mobileSm:h-16
+              "
             src={`${images[e.companyName as keyof typeof images].src}`}
           />
-          <div className="px-0 md:px-10 overflow-y-auto capitalize h-[100%]" key={e.companyName}>
-            <h4 className="text-4xl font-light">{e.role}</h4>
-            <p className="font-bold text-2xl mt-1">{e.companyName}</p>
+          <div
+            className="px-0
+              md:px-10
+              overflow-y-auto
+              capitalize
+              h-[100%]
+              mobileMd:text-center
+              mobileMd:w-[260px]
+              mobileMd:px-2
+              mobileMd:max-h-[400px]
+              mobileSm:w-[220px]
+              mobileSm:text-center
+              mobileSm:px-1
+              mobileSm:max-h-[350px]
+              scrollbar
+              "
+            key={e.companyName}
+          >
+            <h4 className="text-4xl font-light mobileMd:text-2xl mobileSm:text-xl">{e.role}</h4>
+            <p className="font-bold text-2xl mt-1 mobileMd:text-xl mobileSm:text-lg">
+              {e.companyName}
+            </p>
 
-            <div className="flex space-x-2 my-2 flex-wrap gap-x-2 gap-y-1">
+            <div className="flex space-x-2 my-2 flex-wrap gap-x-2 gap-y-1 mobileMd:my-1 mobileSm:my-1">
               {e.tecnologies.map((t) => (
                 <div
                   key={t}
-                  className="h-10 w-10 min-w-10 min-h-10 rounded-full bg-center bg-no-repeat bg-white"
+                  className="
+                    h-10
+                    w-10
+                    min-w-10
+                    min-h-10
+                    rounded-full
+                    bg-center
+                    bg-no-repeat
+                  bg-white
+                    mobileMd:min-h-2
+                    mobileMd:min-w-2
+                    mobileMd:h-8
+                    mobileMd:w-8
+                    mobileSm:min-h-2
+                    mobileSm:min-w-2
+                    mobileSm:h-6
+                    mobileSm:w-6
+                  "
                   title={`${t[0].toUpperCase()}${t.substring(1, t.length)}`}
                   style={{
                     backgroundImage: `url(${images[t as keyof typeof images]?.src})`,
@@ -49,9 +111,24 @@ export default function ExperienceCard() {
               ))}
             </div>
 
-            <p className="uppercase py-5">{e.start}</p>
+            <p className="uppercase py-5 mobileMd:py-3 mobileSm:py-2">{e.start}</p>
 
-            <ul className="flex flex-col list-disc space-y-4 ml-5 text-lg">
+            <ul
+              className="
+                flex
+                flex-col
+                list-disc
+                space-y-4
+                ml-5
+                text-lg
+                mobileMd:text-sm
+                mobileMd:space-y-2
+                mobileMd:ml-3
+                mobileSm:text-sm
+                mobileSm:space-y-1
+                mobileSm:ml-2
+              "
+            >
               {e.atributes.map((a) => (
                 <li key={a}>{a}</li>
               ))}

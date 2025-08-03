@@ -32,17 +32,34 @@ const WorkExperience = (props: Props) => {
       min-height
     "
     >
-      <h3 className="absolute top-16 text-center uppercase tracking-[20px] text-2xl z-50 w-max height-850:top-8 mb-5 ">
+      <h3
+        className="
+        absolute
+        top-16
+        text-center
+        uppercase
+        tracking-[20px]
+        text-2x
+        z-50
+        w-max 
+        height-850:top-8
+        mb-5
+        mobileMd:top-20
+        mobileMd:text-xl
+        mobileMd:tracking-[15px]
+        mobileSm:top-16
+        mobileSm:text-lg
+        mobileSm:tracking-[10px]
+       "
+      >
         {translate[translateState].experience.title}
       </h3>
       <div
         className={classNames(
-          'w-full flex space-x-5 overflow-x-auto p-10 snap-x snap-mandatory [@media(max-height:1200px)]:h-[80%] justify-center overflow-y-hidden',
+          'w-full flex space-x-5 overflow-x-auto p-10 snap-x snap-mandatory [@media(max-height:1200px)]:h-[80%] justify-center overflow-y-hidden mobileMd:min-w-[340px] mobileMd:p-5 mobileSm:min-w-[280px] mobileSm:p-3',
           {
-            'scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-night-mode-yellow/80':
-              isNightMode,
-            'scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-day-mode-yellow/80':
-              !isNightMode,
+            'scrollbar-night': isNightMode,
+            'scrollbar-day': !isNightMode,
           },
         )}
       >
