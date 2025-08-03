@@ -27,12 +27,12 @@ export default function About() {
     md:min-height
     mobileMd:justify-center
     mobileMd:grid
-    mobileMd:grid-rows-[15%,20%,65%]
-    mobileSm:grid-rows-[10%,20%,65%]
-    mobileMd:items-start
+    mobileMd:grid-rows-[10%,25%,65%]
+    mobileSm:grid-rows-[8%,22%,70%]
+    mobileMd:items-center
     mobileMd:place-items-center
     mobileMd:px-4
-    mobileSm:items-start
+    mobileSm:items-center
     mobileSm:place-items-center
     mobileSm:px-4
     "
@@ -45,11 +45,11 @@ export default function About() {
         tracking-[20px]
         text-2xl
         height-850:top-8
-        mobileMd:top-16
+        mobileMd:top-12
         mobileMd:relative
         mobileMd:text-xl
         mobileMd:tracking-[15px]
-        mobileSm:top-[5%]
+        mobileSm:top-[3%]
         mobileSm:text-lg
         mobileSm:tracking-[10px]
       "
@@ -94,15 +94,15 @@ export default function About() {
 
       <div
         className="space-y-10 px-0 md:px-10 w-[70%]
-        mobileMd:space-y-2
-        mobileMd:w-[90%]
-        mobileMd:h-[90%]
+        mobileMd:space-y-3
+        mobileMd:w-[85%]
+        mobileMd:h-[85%]
         mobileMd:p-[8px]
         mobileMd:flex
         mobileMd:flex-col
-        mobileSm:space-y-1
-        mobileSm:w-[95%]
-        mobileSm:h-[85%]
+        mobileSm:space-y-2
+        mobileSm:w-[90%]
+        mobileSm:h-[80%]
         mobileSm:p-[4px]
         mobileSm:flex
         mobileSm:flex-col"
