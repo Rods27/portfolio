@@ -62,6 +62,7 @@ const translate = {
   },
   projects: {
     title: 'Projects',
+    open: 'Open project',
     projects: [
       {
         title: 'Musics Library',
@@ -70,7 +71,8 @@ const translate = {
           'You can filter by genre, artist and album too.',
         ],
         src: 'musicsLibrary',
-        link: 'https://github.com/Rods27/musics-library',
+        link: 'https://rl-27-musics.netlify.app/',
+        github: 'https://github.com/Rods27/musics-library',
         favicon: 'musicsLibrary',
       },
       {
@@ -80,7 +82,8 @@ const translate = {
           "As a seller, they can check their orders and mark them as 'preparing' or 'out for delivery'. As an admin, they can register or delete users.",
         ],
         src: 'deliveryApp',
-        link: 'https://github.com/Rods27/delivery-app',
+        link: '',
+        github: 'https://github.com/Rods27/delivery-app',
         favicon: 'deliveryApp',
       },
       {
@@ -90,7 +93,8 @@ const translate = {
           'Includes infinite scrolling.',
         ],
         src: 'postbook',
-        link: 'https://github.com/Rods27/postbook',
+        link: '',
+        github: 'https://github.com/Rods27/postbook',
         favicon: 'postbook',
       },
     ],

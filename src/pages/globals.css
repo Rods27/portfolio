@@ -58,4 +58,33 @@
   .scrollbar::-webkit-scrollbar-thumb:hover {
     background: #CA8C05;
   }
+
+  /* Componentes reutilizáveis */
+  .card-base {
+    @apply flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 select-none snap-center p-10 hover:opacity-100 opacity-40 transition-opacity duration-200;
+  }
+
+  .card-mobile {
+    @apply mobileMd:space-y-2 mobileMd:max-h-[600px] mobileMd:pt-1 mobileSm:space-y-1 mobileSm:max-h-[500px] mobileSm:pt-0 mobileMd:p-0 mobileSm:p-0;
+  }
+
+  .title-base {
+    @apply absolute text-center uppercase tracking-[20px] text-2xl;
+  }
+
+  .title-mobile {
+    @apply mobileMd:text-xl mobileMd:tracking-[15px] mobileSm:text-lg mobileSm:tracking-[10px];
+  }
+
+  .image-base {
+    @apply rounded-full object-cover filter group-hover:grayscale transition duration-300 ease-in-out caret-transparent;
+  }
+
+  .image-sizes {
+    @apply w-24 h-24 md:w-28 md:h-28 xl:w-32 xl:h-32;
+  }
+
+  .image-mobile {
+    @apply mobileMd:w-14 mobileMd:h-14 mobileSm:w-12 mobileSm:h-12;
+  }
 }

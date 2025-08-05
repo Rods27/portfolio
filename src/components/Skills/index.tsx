@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import SkillItem from './SkillItem';
 import images from '@/helpers/images';
+import { combineClasses, titleClasses, responsiveClasses } from '@/utils/classUtils';
 
 function Skills() {
   const translateState = useConfiguration((s) => s.translate);
@@ -38,20 +39,11 @@ function Skills() {
           "
     >
       <h3
-        className="absolute
-        top-24
-        text-center
-        uppercase
-        tracking-[20px]
-        text-2xl
-        height-850:top-12
-        mobileMd:top-16
-        mobileMd:text-xl
-        mobileMd:tracking-[15px]
-        mobileSm:text-md
-        mobileSm:top-20
-        mobileSm:tracking-[10px]
-      "
+        className={combineClasses(
+          titleClasses.base,
+          titleClasses.mobile,
+          'top-24 height-850:top-12 mobileMd:top-16 mobileSm:top-20',
+        )}
       >
         {skills.title}
       </h3>

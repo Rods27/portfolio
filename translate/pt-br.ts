@@ -61,6 +61,7 @@ const translate = {
   },
   projects: {
     title: 'Projetos',
+    open: 'Abra o projeto',
     projects: [
       {
         title: 'Musics Library',
@@ -69,7 +70,8 @@ const translate = {
           'Também pode fitrar pelo genero, artista ou album.',
         ],
         src: 'musicsLibrary',
-        link: 'https://github.com/Rods27/musics-library',
+        link: 'https://rl-27-musics.netlify.app/',
+        github: 'https://github.com/Rods27/musics-library',
         favicon: 'musicsLibrary',
       },
       {
@@ -79,7 +81,8 @@ const translate = {
           'Como vendedor pode checar suas ordens, marcar o pedido como "preparando" e como "saiu para entrega". Como administrador, pode cadastrar ou deletar usuários.',
         ],
         src: 'deliveryApp',
-        link: 'https://github.com/Rods27/delivery-app',
+        link: '',
+        github: 'https://github.com/Rods27/delivery-app',
         favicon: 'deliveryApp',
       },
       {
@@ -89,7 +92,8 @@ const translate = {
           'Contém infinite scrolling.',
         ],
         src: 'postbook',
-        link: 'https://github.com/Rods27/postbook',
+        link: '',
+        github: 'https://github.com/Rods27/postbook',
         favicon: 'postbook',
       },
     ],

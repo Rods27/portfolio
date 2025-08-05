@@ -46,16 +46,18 @@ export default function Projects() {
             className="w-screen flex-shrink-0 snap-center flex flex-col items-center justify-center
             space-y-5items-centerjustify-center p-20 md:p-44 h-[99vh] select-none mobileMd:p-10 mobileSm:p-5"
           >
-            <motion.img
-              initial={{ y: -300, opacity: 0 }}
-              transition={{ duration: 1.2 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              src={`${projectsImg[p.src as keyof typeof projectsImg]?.src}`}
-              alt={p.title}
-              draggable={false}
-              className="lg:w-[800px] select-none mobileMd:w-[600px] mobileSm:w-[400px]"
-            />
+            <Link href={p.link} target="a_blank">
+              <motion.img
+                initial={{ y: -300, opacity: 0 }}
+                transition={{ duration: 1.2 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                src={`${projectsImg[p.src as keyof typeof projectsImg]?.src}`}
+                alt={p.title}
+                draggable={false}
+                className="lg:w-[800px] select-none mobileMd:w-[600px] mobileSm:w-[400px]"
+              />
+            </Link>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl mb-5 mobileMd:space-y-6 mobileMd:px-5 mobileSm:space-y-4 mobileSm:px-2">
               <h4 className="flex items-center justify-center text-4xl font-semibold text-center mobileMd:text-3xl mobileSm:text-2xl">
                 {p.favicon && (
@@ -64,7 +66,7 @@ export default function Projects() {
                     src={`${favicon[p.favicon as keyof typeof favicon]?.src}`}
                   ></motion.img>
                 )}
-                <span className="underline decoration-day-mode-yellow/50">{p.title}</span>
+                <span className="underline decoration-day-mode-yellow/70">{p.title}</span>
               </h4>
               <ul className="flex flex-col gap-2">
                 {p.info.map((i) => (
@@ -77,9 +79,18 @@ export default function Projects() {
                 ))}
               </ul>
             </div>
-            <Link className="cursor-pointer font-medium" href={p.link} target="a_blank">
+            <Link className="cursor-pointer font-medium" href={p.github} target="a_blank">
               Link github
             </Link>
+            {p.link && (
+              <Link
+                className="cursor-pointer font-medium text-lg underline decoration-day-mode-yellow mt-2"
+                href={p.link}
+                target="a_blank"
+              >
+                {translateState === 'br' ? 'Abrir projeto' : 'Open project'}
+              </Link>
+            )}
           </div>
         ))}
       </div>

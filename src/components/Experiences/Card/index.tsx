@@ -13,7 +13,7 @@ export default function ExperienceCard() {
   return (
     <article
       className={classNames(
-        'flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[700px] select-none snap-center p-10 hover:opacity-100 opacity-40 transition-opacity duration-200 max-h-[920px] mobileMd:w-[340px] mobileMd:space-y-2 mobileMd:max-h-[600px] mobileMd:pt-1 mobileSm:w-[280px] mobileSm:space-y-1 mobileSm:max-h-[500px] mobileSm:pt-0 mobileMd:p-0 mobileSm:p-0',
+        'card-base card-mobile w-[500px] md:w-[600px] xl:w-[700px] max-h-[920px] mobileMd:w-[340px] mobileSm:w-[280px]',
         {
           'bg-night-mode-card': !isDayMode,
           'bg-day-mode-card': isDayMode,
