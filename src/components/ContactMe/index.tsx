@@ -1,5 +1,5 @@
 import { useConfiguration } from '@/store/modules';
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
+import { MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import translate from '@translate';
@@ -36,10 +36,6 @@ function ContactMe() {
           <span className="decoration-day-mode-yellow/50 underline">{contact.contact}</span>
         </h4>
         <div className="space-y-10 mobileMd:space-y-8 mobileSm:space-y-6">
-          <div className="flex items-center space-x-5 justify-center select-all">
-            <PhoneIcon className="text-day-mode-yellow h-7 w-7 animate-pulse mobileMd:h-6 mobileMd:w-6 mobileSm:h-5 mobileSm:w-5" />
-            <p className="text-2xl mobileMd:text-xl mobileSm:text-lg">+551196451672</p>
-          </div>
           <div className="flex items-center space-x-5 justify-center select-all">
             <EnvelopeIcon className="text-day-mode-yellow h-7 w-7 animate-pulse mobileMd:h-6 mobileMd:w-6 mobileSm:h-5 mobileSm:w-5" />
             <p className="text-2xl mobileMd:text-xl mobileSm:text-lg">rods.leite27@gmail.com</p>
