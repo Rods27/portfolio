@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import SkillItem from './SkillItem';
 import images from '@/helpers/images';
-import { combineClasses, titleClasses, responsiveClasses } from '@/utils/classUtils';
+import { combineClasses, titleClasses } from '@/utils/classUtils';
 
 function Skills() {
   const translateState = useConfiguration((s) => s.translate);
