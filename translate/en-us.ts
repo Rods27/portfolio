@@ -71,7 +71,7 @@ const translate = {
           'You can filter by genre, artist and album too.',
         ],
         src: 'musicsLibrary',
-        link: 'https://rl-27-musics.netlify.app/',
+        link: 'https://rl27-musics.netlify.app/',
         github: 'https://github.com/Rods27/musics-library',
         favicon: 'musicsLibrary',
       },

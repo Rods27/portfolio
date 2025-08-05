@@ -70,7 +70,7 @@ const translate = {
           'Também pode fitrar pelo genero, artista ou album.',
         ],
         src: 'musicsLibrary',
-        link: 'https://rl-27-musics.netlify.app/',
+        link: 'https://rl27-musics.netlify.app/',
         github: 'https://github.com/Rods27/musics-library',
         favicon: 'musicsLibrary',
       },
